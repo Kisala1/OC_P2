@@ -119,6 +119,7 @@ body {
   border: 2px solid #0065fc;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  cursor: pointer;
 }
 .research .boutton i {
   display: none;
@@ -216,6 +217,18 @@ body {
 .contenu .titre {
   font-weight: 700;
 }
+.contenu .desc {
+  font-size: small;
+  padding: 5px 0;
+}
+.contenu .fas.fa-star {
+  color: #0065fc;
+  font-size: small;
+  padding-right: 1px;
+}
+.contenu span .fas.fa-star {
+  color: #deebff;
+}
 
 #cache {
   border: none;
@@ -279,10 +292,22 @@ body {
 
 .aside-contenu {
   text-align: left;
-  padding: 20px;
+  padding: 10px;
 }
 .aside-contenu .titre {
   font-weight: 700;
+}
+.aside-contenu .desc {
+  font-size: small;
+  padding: 10px 0;
+}
+.aside-contenu .fas.fa-star {
+  color: #0065fc;
+  font-size: small;
+  padding-right: 1px;
+}
+.aside-contenu span .fas.fa-star {
+  color: #deebff;
 }
 
 /* Activités */
