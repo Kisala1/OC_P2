@@ -113,6 +113,7 @@ body {
 .research .boutton {
   color: white;
   font-weight: 700;
+  font-family: "Raleway";
   background-color: #0065fc;
   padding: 10px;
   border: 2px solid #0065fc;
@@ -221,7 +222,9 @@ body {
   font-family: "Raleway";
   font-size: medium; /* Problème d'écriture avec "ff" */
   font-weight: 700;
-  padding: 15px 0 0 10px;
+  background-color: #f2f2f2;
+  margin-top: 15px;
+  cursor: pointer;
 }
 
 /* Populaires */
@@ -299,7 +302,7 @@ body {
 .activite-card {
   background-color: white;
   border-radius: 20px;
-  box-shadow: 0 4px 8px 0 #f2f2f2;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
 }
@@ -343,8 +346,8 @@ body {
   grid-row: span 13;
 }
 
-.activite-cards :nth-child(3n+1) .activite-img {
-flex: 0 0 85%;
+.activite-cards :nth-child(3n + 1) .activite-img {
+  flex: 0 0 85%;
 }
 
 /* footer*/
@@ -476,9 +479,8 @@ footer {
     flex-basis: 100%;
   }
 
-  .hebergements #Hebergements {
-    padding: 0;
-    margin: 0;
+  .hebergements .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
   #cache {
@@ -494,6 +496,10 @@ footer {
     margin: 0;
   }
 
+  .populaires .aside-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
   .populaires .aside-cards .aside-card {
     flex-basis: 100%;
   }
@@ -501,14 +507,19 @@ footer {
   /* Activités */
 
   .activites {
-    padding: 0px 20px 20px 20px;
+    padding: 0px 20px;
   }
 
   .activites #Activites {
-    padding: 0;
+    margin-left: 10px;
   }
   .activites .activite-cards .activite-card {
     flex-basis: 100%;
+  }
+
+  .activite-cards {
+    display: flex;
+    flex-direction: column;
   }
 
   .activite-img img {
@@ -522,5 +533,8 @@ footer {
   .footer {
     flex-direction: column;
     padding: 20px;
+  }
+  .footer section {
+    padding-top: 10px;
   }
 }
