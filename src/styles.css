@@ -60,7 +60,22 @@ body {
   font-weight: 700;
   color: black;
   padding: 20px 30px;
-  border-top: 2px solid transparent;
+  position: relative;
+}
+.menu li::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 0;
+  height: 2px;
+  background: #0065fc;
+  transition: all .5s ease-in-out;
+}
+.menu li:hover::before {
+  left: 0;
+  width: 100%;
 }
 .menu li:hover {
   font-weight: 700;
@@ -138,10 +153,14 @@ body {
   padding: 0 0 10px 0;
 }
 .filtre {
+  display: inline-block;
   border: #f2f2f2 solid 2px;
   border-radius: 40px;
   padding-right: 15px;
   white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 1s ease-in-out;
 }
 .filtre i {
   width: 2em;
@@ -154,9 +173,26 @@ body {
   border: solid 1px #deebff;
   border-radius: 100px;
 }
+.filtre > span {
+  position: relative;
+}
+.filtre::before {
+  content: "";
+  background-color: #deebff;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  transition: all 1s ease-in-out;
+}
 .filtre:hover {
   font-weight: 700;
-  background-color: #deebff;
+  background-color: #ffffff;
+}
+.filtre:hover::before{
+  width: 100%;
 }
 .fas.fa-info {
   color: #0065fc;
@@ -199,6 +235,7 @@ body {
   flex-basis: calc(33.33% - 14px);
   border-radius: 20px;
   padding: 5px;
+  color: #000;
   box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
 }
 a.card {
@@ -279,6 +316,7 @@ a.card:hover {
   background-color: white;
   border-radius: 20px;
   padding: 5px;
+  color: #000;
   box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
 }
 a.aside-card {
@@ -341,6 +379,7 @@ a.aside-card:hover {
 .activite-card {
   background-color: white;
   border-radius: 20px;
+  color: #000;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
