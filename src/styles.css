@@ -71,7 +71,7 @@ body {
   width: 0;
   height: 2px;
   background: #0065fc;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .menu li:hover::before {
   left: 0;
@@ -191,7 +191,7 @@ body {
   font-weight: 700;
   background-color: #ffffff;
 }
-.filtre:hover::before{
+.filtre:hover::before {
   width: 100%;
 }
 .fas.fa-info {
@@ -368,7 +368,7 @@ a.aside-card:hover {
   padding: 20px 0 0 0;
 }
 
-.activite-cards {
+.activites .cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(24, 15px);
@@ -376,7 +376,32 @@ a.aside-card:hover {
   padding-bottom: 50px;
   margin: -5px;
 }
-.activite-card {
+.activites .cards > * {
+  grid-row: span 24;
+  margin: 15px;
+}
+
+.activites .cards > *:nth-child(2) {
+  grid-row: span 14;
+}
+
+.activites .cards > *:nth-child(3) {
+  grid-row: span 10;
+}
+
+.activites .cards > *:nth-child(5) {
+  grid-row: span 11;
+}
+
+.activites .cards > *:nth-child(6) {
+  grid-row: span 13;
+}
+
+.activites .cards :nth-child(3n + 1) .image {
+  flex: 0 0 85%;
+}
+
+.activites .card {
   background-color: white;
   border-radius: 20px;
   color: #000;
@@ -385,20 +410,20 @@ a.aside-card:hover {
   flex-direction: column;
 }
 
-a.activite-card {
+.activites a.card {
   text-decoration: inherit;
   border: 1px solid transparent;
 }
 
-a.activite-card:hover {
+.activites a.card:hover {
   border: 1px solid #000;
 }
 
-.activite-card,
-.activite-img {
+.activites .card,
+.image {
   overflow: hidden;
 }
-.activite-img img {
+.activites .image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -406,35 +431,10 @@ a.activite-card:hover {
   border-top-left-radius: 20px;
 }
 
-.activite-contenu {
+.activites .card .contenu {
   text-align: left;
   padding: 15px;
   font-weight: 700;
-}
-
-.activite-cards > * {
-  grid-row: span 24;
-  margin: 15px;
-}
-
-.activite-cards > *:nth-child(2) {
-  grid-row: span 14;
-}
-
-.activite-cards > *:nth-child(3) {
-  grid-row: span 10;
-}
-
-.activite-cards > *:nth-child(5) {
-  grid-row: span 11;
-}
-
-.activite-cards > *:nth-child(6) {
-  grid-row: span 13;
-}
-
-.activite-cards :nth-child(3n + 1) .activite-img {
-  flex: 0 0 85%;
 }
 
 /* footer*/
@@ -604,16 +604,16 @@ footer {
   .activites #Activites {
     margin-left: 10px;
   }
-  .activites .activite-cards .activite-card {
+  .activites .cards .card {
     flex-basis: 100%;
   }
 
-  .activite-cards {
+  .activites .cards {
     display: flex;
     flex-direction: column;
   }
 
-  .activite-img img {
+  .image img {
     width: 100%;
     height: 100px;
     object-fit: cover;
