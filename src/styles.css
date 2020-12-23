@@ -219,10 +219,6 @@ body {
   width: 70%;
 }
 
-.hebergements #Hebergements {
-  padding: 0 0 0 20px;
-}
-
 .hebergements .cards {
   display: flex;
   flex-wrap: wrap;
@@ -245,11 +241,17 @@ a.card {
 a.card:hover {
   border: 1px solid #000;
 }
+
 .card .image {
   border-top-left-radius: 15px; /* border-radius - padding .card */
   border-top-right-radius: 15px;
   overflow: hidden;
 }
+
+.hebergements #Hebergements {
+  padding: 0 0 0 20px;
+}
+
 .card .image img {
   width: 100%;
   height: 100px;
@@ -300,16 +302,6 @@ a.card:hover {
   gap: 20px;
 }
 
-.populaires .titre {
-  display: flex;
-  justify-content: space-between;
-}
-
-.fas.fa-chart-line {
-  padding: 20px;
-  line-height: 2em;
-}
-
 .populaires .card {
   height: 140px;
   display: flex;
@@ -336,6 +328,17 @@ a.card:hover {
 .populaires .image {
   flex: 0 0 33.33%;
 }
+
+.populaires .titre {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fas.fa-chart-line {
+  padding: 20px;
+  line-height: 2em;
+}
+
 .populaires .image img {
   width: 100%;
   height: 100%;
@@ -363,10 +366,6 @@ a.card:hover {
 }
 
 /* Activités */
-
-.activites #Activites {
-  padding: 20px 0 0 0;
-}
 
 .activites .cards {
   display: grid;
@@ -422,6 +421,9 @@ a.card:hover {
 .activites .card,
 .image {
   overflow: hidden;
+}
+.activites #Activites {
+  padding: 20px 0 0 0;
 }
 .activites .image img {
   width: 100%;
@@ -558,6 +560,7 @@ footer {
   .conteneur {
     padding: 0;
   }
+
   .hebergements {
     background-color: white;
     width: 100%;
@@ -586,12 +589,12 @@ footer {
     padding: 20px;
   }
 
-  .populaires .card {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
   .populaires .cards .card {
     flex-basis: 100%;
+  }
+
+  .populaires .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
   /* Activités */
@@ -601,9 +604,6 @@ footer {
     margin: -5px;
   }
 
-  .activites #Activites {
-    margin-left: 10px;
-  }
   .activites .cards .card {
     flex-basis: 100%;
   }
@@ -611,6 +611,10 @@ footer {
   .activites .cards {
     display: flex;
     flex-direction: column;
+  }
+  
+  .activites #Activites {
+    margin-left: 10px;
   }
 
   .image img {
