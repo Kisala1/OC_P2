@@ -308,7 +308,6 @@ body {
 }
 
 .populaires .card {
-  height: 140px;
   display: flex;
   background-color: white;
   border-radius: 20px;
