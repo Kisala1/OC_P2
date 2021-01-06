@@ -12,6 +12,10 @@
   src: url("fonts/RalewayBold.ttf");
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 *,
 *:before,
 *:after {
@@ -90,10 +94,11 @@ body {
 /* Texte */
 
 .recherche p {
-  font-style: normal;
+  font-style: normal;  
 }
 
 .recherche em {
+  display: block;
   font-style: normal;
   font-weight: 700;
 }
@@ -248,7 +253,7 @@ a.card:hover {
   overflow: hidden;
 }
 
-.hebergements #Hebergements {
+.hebergements #h1 {
   padding: 0 0 0 20px;
 }
 
@@ -422,8 +427,8 @@ a.card:hover {
 .image {
   overflow: hidden;
 }
-.activites #Activites {
-  padding: 20px 0 0 0;
+.activites #h3 {
+  margin-left: 20px ;
 }
 .activites .image img {
   width: 100%;
@@ -612,7 +617,7 @@ footer {
     display: flex;
     flex-direction: column;
   }
-  
+
   .activites #Activites {
     margin-left: 10px;
   }
