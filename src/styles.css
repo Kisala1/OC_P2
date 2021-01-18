@@ -116,7 +116,7 @@ h1 {
   font-size: medium;
   font-weight: 700;
 }
-.recherche p {
+.texte p {
   font-style: normal;
 }
 
@@ -221,13 +221,18 @@ h1 {
 
 .fas.fa-info {
   color: #0065fc;
-  border: #f2f2f2 solid 2px;
+  border: #f2f2f2 solid 1px;
   border-radius: 100px;
+  font-size: small;
   padding: 5px 10px;
 }
 .info {
+  display: flex;
+  align-items: baseline;
+}
+.info p{
   font-size: small;
-  padding: 5px 0 20px 0;
+  padding: 5px 0 20px 10px;
 }
 
 /* Hébergements */
@@ -523,11 +528,25 @@ footer {
 
   /* Recherche */
 
+  .texte p,
+  h1 {
+    padding: 0 20px;
+  }
+
+  .texte h1 {
+    font-size: large;
+  }
+
+  .texte p {
+    font-size: smaller;
+  }
+
   .research {
     padding: 20px;
   }
 
-  .research .boutton { /* Apparition icone loupe */
+  .research .boutton {
+    /* Apparition icone loupe */
     border-radius: 10px;
     position: absolute;
     left: 230px;
@@ -538,13 +557,6 @@ footer {
   }
   .research .boutton i {
     display: inline;
-  }
-
-  p,
-  h1 {
-    display: flex;
-    flex-direction: column;
-    padding: 0 20px;
   }
 
   /* Filtres */
@@ -561,11 +573,12 @@ footer {
   .info {
     display: flex;
     align-items: baseline;
-    padding: 0 20px 20px 10px;
+    padding: 0 20px 20px 0;
   }
 
   .fas.fa-info {
     margin: 10px;
+    font-size: small;
   }
 
   .hebergement-populaire {
@@ -634,7 +647,8 @@ footer {
     flex-direction: column;
   }
 
-  .activites .image img { /* Permet d'avoir taille adequat */
+  .activites .image img {
+    /* Permet d'avoir taille adequat */
     max-height: 150px;
   }
 
@@ -653,8 +667,7 @@ footer {
     padding-top: 10px;
   }
 }
-@media only screen and (max-width: 1100px){
-
+@media only screen and (max-width: 1100px) {
   .hebergement-populaire {
     flex-direction: column-reverse;
   }
