@@ -344,7 +344,7 @@ h1 {
   flex: 0 0 33.33%;
 }
 
-.populaires .titre {
+.populaires .titre-pop {
   display: flex;
   justify-content: space-between;
   font-weight: 700;
@@ -352,7 +352,7 @@ h1 {
 }
 
 .fas.fa-chart-line {
-  padding: 20px;
+  padding: 20px 0 20px 20px;
   line-height: 2em;
 }
 
@@ -614,6 +614,9 @@ footer {
   .populaires .card {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
+  .populaires .titre-pop {
+    margin: 0 -70px; /* Supprime padding media max-width 1100px */
+  }
 
   /* Activités */
 
@@ -648,5 +651,29 @@ footer {
   }
   .footer section {
     padding-top: 10px;
+  }
+}
+@media only screen and (max-width: 1100px){
+
+  .hebergement-populaire {
+    flex-direction: column-reverse;
+  }
+
+  .hebergements {
+    width: 100%;
+  }
+
+  .populaires {
+    width: 100%;
+  }
+  .populaires .cards {
+    justify-items: center;
+  }
+  .populaires .card {
+    max-height: 180px;
+    max-width: 650px;
+  }
+  .populaires .titre-pop {
+    padding: 0 70px;
   }
 }
